@@ -2,6 +2,10 @@ from flask import Flask, jsonify
 
 app = Flask(__name__)
 
+@app.route('/')
+def hello():
+    return 'You have reached root directory'
+
 @app.route('/user/<id>')
 def user(id):
     users = {
